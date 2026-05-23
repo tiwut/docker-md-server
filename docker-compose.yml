@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  md-server:
+    image: tiwutdev/docker-md-server:latest
+    ports:
+      - "8080:8080"
+      - "8081:8081"
+    volumes:
+      - ./www:/app/www
+    restart: unless-stopped
